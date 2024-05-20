@@ -1,0 +1,55 @@
+Downloading PHP, Windows Steps.
+1. Go to the link https://www.php.net/downloads.php
+2. Click on Windows Download under Current Stable.
+3. Download zip file from vs16 x64 Thread Safe.
+4. Extract the file and save it to local C drive.
+5. Set the environment variable for the PHP folder.
+
+
+
+Running a PHP program.
+Create a new text file hello.php and add this code to print text:
+
+<?php
+echo "Hello World!!";
+?>
+
+CD to the file directory and run php hello.php. This should check that php is installed and setup successfully.
+
+
+
+About PHP.
+PHP is a hypertext preprocessor scripting language.
+PHP scripts start with <?php, and end with ?>.
+All statements in PHP must end with a semicolon.
+
+Please refer to the documentation at https://www.w3schools.com/php/php_forms.asp to learn the php language.
+
+Variables:
+All variables must start $. Some of the datatypes includes String, Integer, Boolean, Array, and Objects.
+Constants may be defined with: define(name, value, case-insensitive).
+Arrays:
+PHP has support for numeric Arrays, and also Associative Arrays, that are maps in PHP. PHP also supports multidimensional arrays. PHP arrays can have different data types.
+
+Control Structures:
+PHP also supports control structures, such as if else, while loop, for loop, foreach loop, switch statements, and also break and continue statements.
+
+Functions:
+PHP allows user-defined functions. Note that PHP functions are not case-sensitive.
+
+Files:
+PHP supports working with files, such as writing to a file, appending to a file, and reading from a file,.
+
+OOP:
+PHP also supports Object-Oriented Programming.
+A class may contain of variables and functions definitions.
+And an object may be instantiated from the class. 
+A constructor may be used when creating an object from a class by also defining the __constructor function.
+A class may also inherit another class with the extends keyword.
+The static keyword can be used to specify that a field from a class may be used without instantiation. 
+The final keyword may be used in parent classes, so that child classes won’t override methods defined in parent classes.
+
+
+
+
+

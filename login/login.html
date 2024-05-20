@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Sixerr Login</title>
+
+        <script type="text/javascript" src="./login.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+        <link rel = "icon" href = "./logoclear_001.png"/>
+        <link rel="stylesheet" href="./login.css">
+    </head>
+
+    <body class="backgroundColor">
+
+        <div class="inputForm">
+            <br>
+            <img src="./logoclear_001.png" alt="logo" class="logoImg"/>
+            <h1>Login</h1>
+
+            <form id = "center">
+                <input id="username" type="text" name="username" class="displayBlock" placeholder = "Your Username">
+                <input id="password" type="password" name="password" class="displayBlock" placeholder = "Your Password">
+                <p>
+                <input type="button" value="Login" onclick="sendLoginInfo();" class="loginButton">
+                </p>
+                <br>
+
+                Don't have an account? <a href = "../Sign_up_page/index_sign_up.html">Sign up</a> <br>
+
+                Forgot password? <a href = "./reset/reset.html">Reset Here</a>
+            </form>
+        </div>
+
+	    <br>
+        <div id = "loginMessage" class = "loginMessage"></div>
+    </body>
+ 
+</html>

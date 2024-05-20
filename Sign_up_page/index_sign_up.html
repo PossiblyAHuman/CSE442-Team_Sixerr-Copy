@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Sixerr Sign-up</title>
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+        <link rel = "icon" href = "./Images/logoclear_001.png">
+        <script type="text/javascript" src="./signup.js"></script>
+        <link rel = "stylesheet" href= "stylesheet_sign_up.css"/>
+    </head>
+
+    <body>
+
+        <div class = "signup-form">
+            <br>
+            <img src="./Images/logoclear_001.png" alt = "Sixerr logo image unavailable">
+            <h1>Create an account</h1>
+            
+            <form id = "form">
+                <input type = "text" name = "username" id = "username" class = "input-box" placeholder = "Your Username">
+                <input type = "password" name = "password" id = "password" class = "input-box" placeholder = "Your Password">
+                <input type = "text" name = "email" id = "email" class = "input-box" placeholder = "Your Email">
+                <p>
+                <button type = "button" value = "sign-up" onclick = "uploadSignupInfo();" class = "signup-button">Submit</button>
+                </p>
+                <br>
+                Already have an account? <a href = "../login/login.html">Sign in</a>
+            </form>
+        </div>
+
+        <div id = "signup_message" class="signup_message"></div>
+
+    </body>
+</html>

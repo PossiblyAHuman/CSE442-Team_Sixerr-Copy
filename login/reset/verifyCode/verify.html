@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Sixerr Verify Reset</title>
+
+        <script type="text/javascript" src="./verify.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+        <link rel = "icon" href = "../../logoclear_001.png">
+        <link rel = "stylesheet" href= "verify.css"/>
+    </head>
+    
+    <body>
+
+        <div class = "signup-form">
+            <br>
+            <img src="../../logoclear_001.png" alt = "Sixerr logo image unavailable">
+            <h1>Reset Password</h1>
+            
+            <form id = "form">
+                <input type = "text" name = "email" id = "email" class = "input-box" placeholder = "Enter your email">
+                <input type = "text" name = "username" id = "username" class = "input-box" placeholder = "Enter your new username">
+                <input type = "password" name = "password" id = "password" class = "input-box" placeholder = "Enter your new password">
+                <br>
+                <input type = "text" name = "code" id = "code" class = "input-box2" placeholder = "Enter verification code">
+                <br>
+                <button type = "button" value = "sign-up" onclick = "verifyCode();" class = "signup-button">Reset</button>
+            </form>
+        </div>
+
+        <div id = "signup_message" class="signup_message"></div>
+    </body>
+</html>
