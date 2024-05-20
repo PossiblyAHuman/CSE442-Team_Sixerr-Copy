@@ -1,0 +1,27 @@
+@media screen and (max-width: 1200px) {
+
+    .postOffers {
+        margin-top: 40px;
+        background-color: silver;
+        width: 80%;
+        margin: auto;
+        
+        border-style: solid;
+        border-width: 1px;
+        border-color: black;
+        border-radius: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+    
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .Row p {
+        margin: 10px;
+        font-size: 12px;
+    }
+    button{
+        font-size: 10px;
+        width: 70%;
+    }
+  }

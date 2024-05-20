@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sixerr</title>
+    <meta name="description" content="This is the homepage of Sixerr: buy and sell services.">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="images/logoclear_001.png" type="image/x-icon" />
+    <link rel="stylesheet" href="homepage.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel='stylesheet'>
+    <script src="homepage.js" defer></script>
+  </head>
+  <body>
+    <?php echo $CSS_dark_mode;?>
+    <nav>
+        <img class="logo" src="images/logoclear_001.png" alt="Sixerr Logo">
+        
+        
+        
+        <div class="dropdown">
+            <!-- <button onclick="myFunction()" class="dropbtn"><i class="gg-menu"></i></button> -->
+            <!-- <button onclick="myFunction()" class="dropbtn"><img onclick="myFunction()" class="profile-dropdown" src=<?php echo get_curr_user_pfp(); ?>></button> -->
+            <div class ="container5"> 
+                <button onclick="myFunction()" class="dropbtn"><i class="gg-menu"></i></button>
+                <a href=<?php echo '../review/viewProfileAPI.php/?id=' . $_SESSION['id']; ?>><img class="profile-dropdown" src=<?php echo get_curr_user_pfp(); ?> alt="profile"></a>
+            </div>
+
+            <div id="myDropdown" class="dropdown-content">
+                <a href=<?php echo '../review/viewProfileAPI.php/?id=' . $_SESSION['id']; ?>> View Profile</a>
+                <a href="../offers/viewOffersFrontend.html">Incoming offers</a>
+                <a href="../offers/viewOffersFrontendActive.html">Current/Active Jobs and Sent Offers</a>
+              <a href="../post/create.php">Create Post</a>
+              <a href="../homepage-ui/logout.php">Logout</a>
+            </div>
+          </div>
+    </nav>
+
+    <form action="search/searchFrontend.php" method="GET">
+        <input type="text" name="query" class="Search-Bar"  placeholder="  Search...">
+        <input type = "hidden" name = "id" value = <?php echo $id;?> >
+    </form>
+   
+
+    <div id="FilterMenu" class = "FilterMenu">
+        <h1>Search Filter:</h1>
+        <!-- TODO change to <form action="/search_function.php"> or something of the sort-->
+        <form action="search/searchFrontend.php" method = "GET">
+            <a href="javascript:void(0)" class="closebutton" onclick="closeFilterMenu()">&times;</a>
+            <div>
+                <input type="checkbox" id="Newest" name="Newest">
+                <label for="Newest"> Newest</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="Oldest" name="Oldest">
+                <label for="Oldest"> Oldest</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="HighestRating" name="HighestRating">
+                <label for="HighestRating"> Highest Cost</label><br>
+            </div>
+            <div>
+                <input type="checkbox" id="LowestRating" name="LowestRating">
+                <label for="LowestRating"> Lowest Cost</label><br>
+            </div>
+            <input class = "SearchButton" type="submit" value="Search">
+          </form>
+    </div>
+    
+    <div id = "OverFlowYourRequests" class = "OverFlowPosts"> 
+        <div class= "ReqSearch"> 
+            <a href="javascript:void(0)" class="closebutton" onclick="closeOverFlowPosts('YourRequests')">&times;</a>
+            <form action="search/yourSearchFrontend.php" method="GET">
+                <input class="Search-Bar" type="search" name="query" placeholder="  Search...">
+                <input type = "hidden" name = "id" value = <?php echo $id;?> >
+            </form>
+            <div id = "RequestTextType" class = "YourRequests">
+                Your Requests:
+            </div>
+        </div>
+        <div id="Posts" class="Posts">
+            <?php echo $your_requests;?>
+        </div>
+        
+
+    </div>
+    <div id = "OverFlowAllRequests" class = "OverFlowPosts"> 
+        <div class= "ReqSearch"> 
+            <a href="javascript:void(0)" class="closebutton" onclick="closeOverFlowPosts('AllRequests')">&times;</a>
+            <form action="search/searchFrontend.php" method="GET">
+                <input class="Search-Bar" type="search" name="query" placeholder="  Search...">
+                <input type = "hidden" name = "id" value = <?php echo $id;?> >
+            </form>
+            <div id = "RequestTextType" class = "YourRequests">
+                All Requests:
+            </div>
+        </div>
+
+        <!--TODO: Will need to dynamically add posts here on server side-->
+        <div id="Posts" class="Posts">
+            <?php echo $all_requests;?>
+        </div>
+        
+
+    </div>
+    <div class = "ReqFilter">
+        <button class="FilterButton" onclick="openFilterMenu()">
+            ▶
+        </button>
+        <div class = "Requests">
+            <div class="ReqHeader1">
+                <div class = "YourRequests">
+                    Your Requests:
+                </div>
+                <button class = "PlusButton" onclick="openOverFlowPosts('YourRequests')">
+                    +
+                </button>
+
+                
+            </div>
+            <!--TODO: Will need to dynamically add posts here on server side-->
+            <div id = "PostContent1" class="PostContent1">
+                <?php echo $your_requests;?>
+                
+            </div>
+
+            <div class="ReqHeader2">
+                <div class ="AllRequests">
+                    All Requests:
+               </div>
+               <button class = "PlusButton" onclick="openOverFlowPosts('AllRequests')">
+                   +
+               </button>
+            </div>
+            <div class="PostContent2">
+                <?php echo $all_requests;?>
+            </div>
+        </div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sixerr</title>
+    <meta name="description" content="This is the profile editing page of Sixerr. Buy and sell services.">
+
+    <link rel="icon" href="images/logoclear_001.png" type="image/x-icon" />
+    <link rel="stylesheet" href="create.css" />
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="create.js" defer></script>
+  </head>
+  <body>
+    <?php echo $CSS_dark_mode;?>
+    <nav>
+        <a href="../homepage-ui/homepage.php"> <img class="logo" src="images/logoclear_001.png" alt="Sixerr Logo"></a>
+        <a href=<?php echo '../review/viewProfileAPI.php/?id=' . $_SESSION['id']; ?>><img class="profile-pic" src=<?php echo get_curr_user_pfp(); ?> alt="profile"></a>
+    </nav>
+    <div class = "main-content">
+        <div class="left-wrapper">
+            <div class = "create-header">
+                Create a Gig:
+            </div>
+            <div class= "image-container">
+                <img class="logo" src="images/logoclear_001.png" alt="Sixerr Logo">
+            </div>
+            
+        </div>
+        <div class="right-wrapper">
+            <form>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" placeholder="..."><br><br>
+                <label for="hours">Estimated Hours:</label>
+                <input type="text" id="hours" name="hours" placeholder="..."><br><br>
+                <label for="pay">Estimated Pay:</label>
+                <input type="text" id="pay" name="pay" placeholder="..."><br><br>
+                <label for="desc">Description:</label><br>
+                <textarea id = "desc" type="text" rows = "5" cols = "45" name = "desc" placeholder="..."></textarea><br><br>
+                <label for="image">Select an Image:</label><br>
+                <input type="file" id="image" name="image"><br>
+                <input class ="post-gig-button" type="button" value="Post Gig" onclick="sendCreateForm();">
+              </form>
+        </div>
+    </div>
+
+  </body>
+</html>

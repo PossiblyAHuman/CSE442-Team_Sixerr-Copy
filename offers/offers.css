@@ -1,0 +1,169 @@
+body {
+    font-family: Inter;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+/*Navigation Header Styling*/
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #5B75D1;
+    grid-column: 1/4;
+    grid-row: 1/3;
+}
+
+    nav .logo {
+        padding: 14px;
+        padding-left: 32px;
+        border-radius: 4px;
+        height: 50px;
+        width: 50px;
+    }
+
+
+/*CSS Styling For the Body Contents layout and organization.*/
+.Row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+button {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+/*CSS for get-post.php*/
+img {
+    width: 200px;
+    height: auto;
+}
+
+.Row Div {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 30%;
+    margin: 5px;
+    margin-top: 20px;
+}
+
+.Row .description {
+    width: 65%;
+}
+
+
+
+/*CSS styling for sending an offer.*/
+.displayblock {
+    border-radius: 5px;
+    padding: 8px;
+    margin: 10px;
+    width: 70%;
+    border: 1px solid #999;
+}
+
+.loginButton {
+    color: FFFFFF;
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 0;
+    cursor: pointer;
+    border: 0;
+    background-color: 184FEE;
+}
+
+.loginMessage {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: rgba(255, 50, 50);
+}
+
+.offerResponseCSS {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    background: lightgreen;
+}
+
+/*CSS Styling for viewOffersFrontend.html*/
+.offer div {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.postOffers {
+    margin-top: 40px;
+    background-color: darkgrey;
+    width: 40%;
+    margin: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.Row p {
+    margin: 10px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    padding: 26px;
+    border-radius: 92px;
+}
+
+h4 {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    h3 {
+        display: none;
+    }
+
+    h4 {
+        display: block;
+    }
+
+    .loginButton {
+        font-size: 8px;
+    }
+}

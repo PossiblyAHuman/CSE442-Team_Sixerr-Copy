@@ -1,0 +1,352 @@
+/*TODO find exact colors and sizes later*/
+body {
+    position: absolute;
+    /* background-position-y: bottom; */
+    display: flex;
+    background-color: lightgray;
+    height: 100vh;
+    width: 100%;
+    margin: unset;
+    flex-direction: column;
+}
+button{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    
+    width: 99px;
+    height: 40px;
+    margin: 23px 2px;
+    border: none;
+    border-radius: 30px;
+
+    /*font-family: Exo, sans-serif;*/
+    font-size: 16px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+img{
+    width:50px;
+    height:50px;
+}
+
+/*Navigation Header Styling*/
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #5B75D1;
+    /*background-color: #434674;*/
+    flex: 1;
+}
+
+nav .logo{
+    padding: 24px;
+    padding-left: 32px;
+}
+nav .profile-pic{
+    padding: 26px;
+    border-radius: 92px;
+}
+
+.main-content{
+    flex: 50;
+
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.left-wrapper {
+    flex: 1;
+
+}
+
+.profile-box {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 357px;
+    height: 339px;
+    border-radius: 6px;
+    margin: 27px;
+    overflow: hidden;
+
+}
+
+.profile-box .settings-wrap {
+    flex: 1;
+}
+
+.profile-box .settings-wrap .fa {
+    padding-left: 15px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+
+.profile-box .middle-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    flex: 15;
+}
+.profile-box .middle-wrap .profile-pic{
+    padding: -64px;
+    border-radius: 85px;
+    margin-left: 117px;
+    height: 105px;
+    width: 105px;
+}
+.profile-box .middle-wrap .text {
+    padding-left: 128px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.profile-box .middle-wrap .input-box {
+
+}
+
+
+.right-wrapper{
+    flex: 2;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.right-wrapper .gigs-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.gigs-header .PlusButton {
+    cursor: pointer;
+    width: 0px;
+    height: 0px;
+    font-size: 40px;
+    font-weight: 100;
+    margin: 30px;
+  }
+
+  .gigs-header .gigs-text {
+    font-size: 35px;
+    font-weight: 100;
+
+  }
+
+.right-wrapper .gigs{
+    /* flex: 16; */
+    overflow: hidden;
+    height: 284px;
+    margin-bottom: 167px;
+}
+
+
+/*Postbox, copy and pasted from homepage.css*/
+.PostBox {
+  background-color: white;
+  width: 229px;
+  height: 215px;
+  display: inline-block;
+  margin: 27px;
+  overflow: hidden;
+  border: black;
+  border-style: solid;
+  border-width: thin;
+}
+
+.PostBox .Container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: lightgrey;
+  border-bottom: thin solid black;
+  height: 191px;
+  overflow: hidden;
+}
+.PostBox .Container1 .title {
+  font-size: 25px;
+  font-weight: 200;
+  font-family: serif;
+  text-align: start;
+  overflow: hidden;
+}
+.PostBox .Container1 img {
+  height: 109px;
+  width: 217px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.PostBox .Container1 .DescContainer img {
+  height: 33px;
+  width: 33px;
+  border-radius: 74px;
+}
+.PostBox .Container1 .DescContainer .username {
+  display: inline-block;
+  overflow: hidden;
+  margin-bottom: -1px;
+}
+.PostBox .Container1 .DescContainer .description {
+  margin-left: 31px;
+  overflow: hidden;
+  width: 185px;
+  /* margin-bottom: 16px; */
+  /* height: 46px; */
+}
+
+.PostBox .Container2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.PostBox .ratingStar {
+  color: orange;
+}
+
+.PostBox .wombat {
+  display: inline-block;
+  overflow: hidden;
+  width: 185px;
+  height: 40px;
+}
+
+.PostBox .RatingContainer {
+  margin-left: 8px;
+  margin-top: 2px;
+}
+
+.PostBox .Price {
+  margin-right: 2px;
+}
+
+  /*overflow posts copy and pasted from homepage.css*/
+  .OverFlowPosts {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: lightgray;
+    overflow-x: hidden; /*TODO change this*/
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .OverFlowPosts ReqSearch{
+    flex: 1;
+  }
+  
+  .OverFlowPosts .closebutton{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 50px;
+    margin-left: 50px;
+    color: black;
+  }
+  
+  .OverFlowPosts .Posts {
+    flex: 3;
+    margin: -5px;
+    margin-top: 30px;
+    padding-bottom: 58px;
+    display: inline-block;
+  
+  }
+  .OverFlowPosts .YourRequests {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 15px;
+  }
+
+  .OverFlowPosts .Search-Bar {
+    background-color: white;
+    color: black;
+  
+    width: 589px;
+    height: 68px;
+    margin: 23px 2px;
+    border: none;
+    border-radius: 234px;
+    font-family: Exo, sans-serif;
+    font-size: 30px;
+  }
+
+
+  .settings-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden; /*TODO change this*/
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  
+  .settings-menu .closebutton{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 50px;
+    margin-left: 50px;
+    color: black;
+  }
+
+  .pop-up-dialogue {
+    height: 165px;
+    width: 0px;
+    position: fixed;
+    background-color: white;
+    margin-top: 78px;
+    margin-left: 554px;
+    margin-bottom: 319px;
+    border-radius: 15px;
+    overflow: auto;
+    padding: 0px;
+    overflow-x: hidden; /*TODO change this*/
+  }
+
+  .pop-up-dialogue .closebutton{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+    color: black;
+  }
+
+.light-button{
+  margin-top: 20px;
+  margin-left: 12px;
+  color: black;
+  cursor: pointer;
+}
+
+
+  @media screen and (max-width: 500px) {
+    .main-content{
+    flex-direction: column;
+    }
+  }

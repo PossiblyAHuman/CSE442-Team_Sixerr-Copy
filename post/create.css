@@ -1,0 +1,121 @@
+/*TODO find exact colors and sizes later*/
+body {
+    position: absolute;
+    /* background-position-y: bottom; */
+    display: flex;
+    background-color: gray;
+    height: 100vh;
+    width: 100%;
+    margin: unset;
+    flex-direction: column;
+}
+button{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    
+    width: 99px;
+    height: 40px;
+    margin: 23px 2px;
+    border: none;
+    border-radius: 30px;
+
+    /*font-family: Exo, sans-serif;*/
+    font-size: 16px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+img{
+    width:50px;
+    height:50px;
+}
+
+/*Navigation Header Styling*/
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #5B75D1;
+    flex: 1;
+}
+
+nav .logo{
+    padding: 24px;
+    padding-left: 32px;
+}
+nav .profile-pic{
+    padding: 26px;
+    border-radius: 92px;
+}
+
+.main-content{
+    flex: 50;
+
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.left-wrapper {
+    flex: 2;
+
+}
+
+.right-wrapper{
+    flex: 2;
+
+
+}
+
+.left-wrapper .create-header {
+    display: flex;
+    font-size: 30px;
+    color: white;
+    margin-top: 28px;
+    margin-left: 101px;
+}
+
+.left-wrapper img {
+    width: 210px;
+    height: 209px;
+    margin-left: 83px;
+    margin-top: 71px;
+}
+
+.left-wrapper .image-container {
+    width: 387px;
+    height: 353px;
+    background-color: lightgray;
+    margin-left: 103px;
+    margin-top: 16px;
+}
+
+.right-wrapper form {
+    margin-top: 19px;
+    display: inline-grid;
+}
+
+.right-wrapper label {
+    display: inline-grid;
+    font: 20px;
+    color: white;
+}
+.right-wrapper input {
+    height: 30px;
+    width: 353px;
+}
+.right-wrapper .post-gig-button {
+    display: inline-grid;
+    height: 43px;
+    width: 161px;
+    border-radius: 30px;
+    background: blue;
+    color: white;
+    border: gray;
+}

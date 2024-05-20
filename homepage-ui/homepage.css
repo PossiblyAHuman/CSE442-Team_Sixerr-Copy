@@ -1,0 +1,813 @@
+/*TODO find exact colors and sizes later*/
+body {
+  position: absolute;
+  /* background-position-y: bottom; */
+  display: grid;
+  background-color: lightgray;
+  height: 100vh;
+  width: 100%;
+  margin: unset;
+}
+
+/*Header Styling*/
+nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #5B75D1;
+  grid-column: 1/4;
+  grid-row: 1/3;
+}
+
+/*wrapper for logout add skill and profile image*/
+.HeaderWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 285px;
+}
+
+.CreateButton {
+  margin-left: 320px;
+}
+.LogoutButton {
+  margin-right: 5px;
+}
+
+button{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  
+  width: 99px;
+  height: 40px;
+  margin: 23px 2px;
+  border: none;
+  border-radius: 30px;
+
+  /*font-family: Exo, sans-serif;*/
+  font-size: 16px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+img{
+  width:50px;
+  height:50px;
+}
+
+.logo{
+  padding: 24px;
+  padding-left: 32px;
+}
+.profile-pic{
+  padding: 26px;
+  border-radius: 92px;
+}
+
+
+
+form {
+  
+  grid-column: 1/4;
+  grid-row: 3/6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Search-Bar {
+  background-color: white;
+  color: black;
+
+  width: 589px;
+  height: 68px;
+  margin: 23px 2px;
+  border: none;
+  border-radius: 234px;
+  font-family: Exo, sans-serif;
+  font-size: 30px;
+}
+
+.ReqFilter {
+  display: grid;
+  grid-column: 1 / 4;
+  grid-row: 6/17;
+}
+
+.FilterButton {
+  grid-column: 1 / 2;
+  background-color: gray;
+  cursor: pointer;
+  width: 24px;
+  height: 409px;
+  margin: 54px -1px;
+  border: none;
+  border-radius: 0px 30px 30px 0px;
+  /* font-family: Exo, sans-serif; */
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+}
+
+.FilterMenu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #3154d4;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.FilterMenu form {
+  display:contents;
+  
+}
+
+.FilterMenu label{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  font-family: Exo, sans-serif;
+
+  transition: 0.3s;
+  
+}
+
+.FilterMenu .closebutton {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: black;
+}
+.FilterMenu h1{
+  color: black;
+  font-family: Exo, sans-serif;
+
+  transition: 0.3s;
+}
+.FilterMenu .SearchButton {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  
+  width: 99px;
+  height: 40px;
+  margin: 23px 2px;
+  border: none;
+  border-radius: 30px;
+
+  /*font-family: Exo, sans-serif;*/
+  font-size: 16px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.OverFlowPosts {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: lightgray;
+  overflow-x: hidden; /*TODO change this*/
+  transition: 0.5s;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.OverFlowPosts ReqSearch{
+  flex: 1;
+}
+
+.OverFlowPosts .closebutton{
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 50px;
+  margin-left: 50px;
+  color: black;
+}
+
+.OverFlowPosts .Posts {
+  flex: 3;
+  margin: -5px;
+  margin-top: 30px;
+  padding-bottom: 58px;
+  display: inline-block;
+
+}
+.OverFlowPosts .YourRequests {
+  margin-left: 15px;
+}
+
+.Requests {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2 / 20;
+}
+
+
+
+.ReqHeader1, .ReqHeader2 {
+  /* flex: 1; */
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.PostContent1, .PostContent2 {
+  /* flex: 3; */
+  flex-direction: row;
+  /* flex-shrink: 0; */
+  gap: 50px;
+  overflow: hidden;
+  height: 290px;
+}
+
+
+
+/*Create a sample post for your requests. And a message to create a request for all requests*/
+.YourRequests {
+  margin: -6px;
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+.AllRequests {
+  margin: -6px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.PlusButton {
+  cursor: pointer;
+  width: 0px;
+  height: 0px;
+  font-size: 40px;
+  font-weight: 100;
+  margin: 30px;
+}
+
+
+.PostBox {
+  background-color: white;
+  width: 229px;
+  height: 215px;
+  display: inline-block;
+  margin: 27px;
+  overflow: hidden;
+  border: black;
+  border-style: solid;
+  border-width: thin;
+}
+
+.PostBox .Container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: lightgrey;
+  border-bottom: thin solid black;
+  height: 191px;
+  overflow: hidden;
+}
+.PostBox .Container1 .title {
+  font-size: 25px;
+  font-weight: 200;
+  font-family: serif;
+  text-align: start;
+  overflow: hidden;
+}
+.PostBox .Container1 img {
+  height: 109px;
+  width: 217px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.PostBox .Container1 .DescContainer img {
+  height: 33px;
+  width: 33px;
+  border-radius: 74px;
+}
+.PostBox .Container1 .DescContainer .username {
+  display: inline-block;
+  overflow: hidden;
+  margin-bottom: -1px;
+}
+.PostBox .Container1 .DescContainer .description {
+  margin-left: 31px;
+  overflow: hidden;
+  width: 185px;
+  /* margin-bottom: 16px; */
+  /* height: 46px; */
+}
+
+.PostBox .Container2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.PostBox .ratingStar {
+  color: orange;
+}
+
+.PostBox .wombat {
+  display: inline-block;
+  overflow: hidden;
+  width: 185px;
+  height: 40px;
+}
+
+.PostBox .RatingContainer {
+  margin-left: 8px;
+  margin-top: 2px;
+}
+
+.PostBox .Price {
+  margin-right: 2px;
+}
+
+
+
+
+/*dropdown source: w3schools */
+.dropbtn {
+  background-color: #5B75D1;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #5B75D1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 102px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.profile-dropdown{
+  height: 50px;
+  width: 50px;
+  border-radius: 92px;
+  margin-top: 20px;
+  margin-right: 15px;
+
+}
+
+.container5{
+  display: flex;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    position: absolute;
+    /* background-position-y: bottom; */
+    display: inline;
+    background-color: lightgray;
+    height: 100vh;
+    width: 100%;
+    margin: unset;
+  }
+
+  nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #5B75D1;
+    grid-column: 1/4;
+    grid-row: 1/3;
+  }
+  
+  /*wrapper for logout add skill and profile image*/
+  .HeaderWrapper{
+    display: none;
+  }
+  
+  .CreateButton {
+    margin-left: -61px;
+    display: none;
+  }
+  .LogoutButton {
+    margin-right: 5px;
+    display: none;
+  }
+
+  .AddSkillButton{
+    display: none;
+  }
+  
+  button{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    
+    width: 99px;
+    height: 40px;
+    margin: 23px 2px;
+    border: none;
+    border-radius: 30px;
+  
+    /*font-family: Exo, sans-serif;*/
+    font-size: 16px;
+    font-weight: bold;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  
+  img{
+    width:50px;
+    height:50px;
+  }
+  
+  .logo{
+    padding: 24px;
+    padding-left: 32px;
+  }
+  .profile-pic{
+    padding: 26px;
+    border-radius: 92px;
+  }
+  
+  form {
+  
+    grid-column: 1/4;
+    grid-row: 3/6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Search-Bar {
+    background-color: white;
+    color: black;
+  
+    width: 312px;
+    height: 68px;
+    margin: 23px 2px;
+    border: none;
+    border-radius: 234px;
+    font-family: Exo, sans-serif;
+    font-size: 25px;
+  }
+  
+  .ReqFilter {
+    display: grid;
+    grid-column: 1 / 4;
+    grid-row: 6/17;
+  }
+  
+  .FilterButton {
+    grid-column: 1 / 2;
+    background-color: gray;
+    cursor: pointer;
+    width: 24px;
+    height: 409px;
+    margin: 54px -1px;
+    border: none;
+    border-radius: 0px 30px 30px 0px;
+    /* font-family: Exo, sans-serif; */
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+  }
+  
+  .FilterMenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #3154d4;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-radius: 0px 30px 30px 0px;
+  }
+  
+  .FilterMenu form {
+    display:contents;
+    
+  }
+  
+  .FilterMenu label{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    font-family: Exo, sans-serif;
+  
+    transition: 0.3s;
+    
+  }
+  
+  .FilterMenu .closebutton {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: black;
+  }
+  .FilterMenu h1{
+    color: black;
+    font-family: Exo, sans-serif;
+  
+    transition: 0.3s;
+  }
+  .FilterMenu .SearchButton {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    
+    width: 99px;
+    height: 40px;
+    margin: 23px 2px;
+    border: none;
+    border-radius: 30px;
+  
+    /*font-family: Exo, sans-serif;*/
+    font-size: 16px;
+    font-weight: bold;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .OverFlowPosts {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: lightgray;
+    overflow-x: hidden; /*TODO change this*/
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .OverFlowPosts ReqSearch{
+    flex: 1;
+  }
+  
+  .OverFlowPosts .closebutton{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 50px;
+    margin-left: 50px;
+    color: black;
+  }
+  
+  .OverFlowPosts .Posts {
+    flex: 3;
+    margin: -5px;
+    margin-top: 30px;
+    padding-bottom: 58px;
+    display: inline-block;
+  
+  }
+  .OverFlowPosts .YourRequests {
+    margin-left: 15px;
+  }
+  
+  .Requests {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 / 20;
+  }
+  
+  
+  
+  .ReqHeader1, .ReqHeader2 {
+    /* flex: 1; */
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+  }
+  
+  .PostContent1, .PostContent2 {
+    /* flex: 3; */
+    flex-direction: row;
+    /* flex-shrink: 0; */
+    gap: 50px;
+    overflow: hidden;
+    height: 290px;
+    display:inline-grid;
+    justify-content: center;
+  }
+  
+  
+  
+  /*Create a sample post for your requests. And a message to create a request for all requests*/
+  .YourRequests {
+    margin: -6px;
+    font-size: 30px;
+    font-weight: bold;
+    
+  }
+  .AllRequests {
+    margin: -6px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .PlusButton {
+    cursor: pointer;
+    width: 0px;
+    height: 0px;
+    font-size: 40px;
+    font-weight: 100;
+    margin: 30px;
+  }
+  
+  
+  .PostBox {
+    background-color: white;
+    width: 229px;
+    height: 215px;
+    display: inline-block;
+    margin: 27px;
+    overflow: hidden;
+    border: black;
+    border-style: solid;
+    border-width: thin;
+  }
+  
+  .PostBox .Container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightgrey;
+    border-bottom: thin solid black;
+    height: 191px;
+    overflow: hidden;
+  }
+  .PostBox .Container1 .title {
+    font-size: 25px;
+    font-weight: 200;
+    font-family: serif;
+    text-align: start;
+    overflow: hidden;
+  }
+  .PostBox .Container1 img {
+    height: 109px;
+    width: 217px;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  .PostBox .Container1 .DescContainer img {
+    height: 33px;
+    width: 33px;
+    border-radius: 74px;
+  }
+  .PostBox .Container1 .DescContainer .username {
+    display: inline-block;
+    overflow: hidden;
+    margin-bottom: -1px;
+  }
+  .PostBox .Container1 .DescContainer .description {
+    margin-left: 31px;
+    overflow: hidden;
+    width: 185px;
+    /* margin-bottom: 16px; */
+    /* height: 46px; */
+  }
+  
+  .PostBox .Container2 {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .PostBox .ratingStar {
+    color: orange;
+  }
+  
+  .PostBox .wombat {
+    display: inline-block;
+    overflow: hidden;
+    width: 185px;
+    height: 40px;
+  }
+  
+  .PostBox .RatingContainer {
+    margin-left: 8px;
+    margin-top: 2px;
+  }
+  
+  .PostBox .Price {
+    margin-right: 2px;
+  }
+
+  /*dropdown source: w3schools */
+  .dropbtn {
+    background-color: #5B75D1;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #5B75D1;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 102px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
+  .profile-dropdown{
+    height: 50px;
+    width: 50px;
+    border-radius: 92px;
+
+  }
+
+  
+}

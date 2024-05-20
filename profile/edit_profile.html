@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sixerr</title>
+    <meta name="description" content="This is the profile editing page of Sixerr. Buy and sell services.">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="icon" href="images/logoclear_001.png" type="image/x-icon" />
+    <link rel="stylesheet" href="edit_profile.css?v=<?php echo time(); ?>" />
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/circle-half-stroke?f=classic&s=solid">
+    <script src="edit_profile.js" defer></script>
+  </head>
+  <body id ="body">
+    <?php echo $CSS_dark_mode;?>
+    <nav>
+        <a href="../homepage-ui/homepage.php"> <img class="logo" src="images/logoclear_001.png" alt="Sixerr Logo"></a>
+        <a href=<?php echo '../review/viewProfileAPI.php/?id=' . $_SESSION['id']; ?>><img class="profile-pic" src=<?php echo get_curr_user_pfp(); ?> alt="profile"></a>
+    </nav>
+    <div class = "main-content">
+        <div class="left-wrapper">
+            <div class="profile-box">
+                <div class="settings-wrap">
+                    <a onclick="openSettings()">
+                        <i style="font-size:24px" class="fa">&#xf013;</i> <br>
+                        Settings <br>
+                    </a>
+
+                </div>
+                <div class = "middle-wrap">
+                    <img class="profile-pic" src=<?php echo get_curr_user_pfp(); ?> alt="profile">
+                    <div id = "username" class = "text"> <?php echo $username; ?> </div>
+                    <form>
+                        <label for="bio">Bio:</label><br>
+                        <textarea id = "bio" type="text" rows = "5" cols = "45" name = "bio" placeholder="Change bio... "></textarea><br>
+                        <input type="button" value="Save" onclick="sendNewBio();">
+                    </form> 
+                </div>
+            </div>
+    
+    
+        </div>
+        <div class="right-wrapper">
+            <div class = "gigs-header">
+                <div id = "gigs-text" class = "gigs-text">
+                    Your Gigs:
+                </div>
+                <button class = "PlusButton" onclick="openOverFlowPosts()">
+                    +
+                </button>
+            </div>
+            <div class = "gigs">
+                <?php echo $your_requests;?>
+            </div>
+        </div>
+    </div>
+
+    <div id = "settings-menu" class = "settings-menu">
+        <a href="javascript:void(0)" class="closebutton" onclick="closeSettings()">&times;</a>
+        <h1>Settings</h1>
+        <h2>Change Login Information: </h2>
+        <form>
+            <label for="email">New email:</label>
+            <input type="text" id="email" name="email"><br><br>
+            <label for="pass">New Password:</label>
+            <input type="password" id="pass" name="pass"><br><br>
+            <label for="image">New Profile Picture:</label>
+            <input type="file" id="image" name="image"><br><br>
+            <input type="button" value="Submit" onclick="sendNewEmailPass();">
+          </form>
+
+
+        <a class = light-button onclick="switchLightMode()">
+            Change Lighting
+            <i style="font-size:24px" class="fa">&#xf185;</i>
+        </a>
+
+    </div>
+    <div id = "pop-up-dialogue" class = "pop-up-dialogue">
+        <a href="javascript:void(0)" class="closebutton" onclick="closeDialogue()">&times;</a>
+        <div id = "dialogue-text" class = "dialogue-text"></div>
+    </div>
+
+    <div id = "OverFlowYourRequests" class = "OverFlowPosts"> 
+        <div class= "ReqSearch"> 
+            <a href="javascript:void(0)" class="closebutton" onclick="closeOverFlowPosts()">&times;</a>
+            <form>
+                <input class="Search-Bar" type="search" name="q" placeholder="  Search...">
+            </form>
+            <div id = "RequestTextType" class = "YourRequests">
+                Your Gigs:
+            </div>
+        </div>
+
+        <div id="Posts" class="Posts">
+            <?php echo $your_requests;?>
+        </div>
+    </div>
+  </body>
+</html>

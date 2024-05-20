@@ -1,0 +1,128 @@
+body {
+    font-family: Inter;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+/*Navigation Header Styling*/
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #5B75D1;
+    grid-column: 1/4;
+    grid-row: 1/3;
+}
+
+
+nav .logo{
+    padding: 14px;
+    padding-left: 32px;
+    border-radius: 4px;
+    width:50px;
+    height:50px;
+}
+
+
+/*CSS Styling For the Body Contents layout and organization.*/
+.Row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.Bio, .Gigs, .featuredWork, .Reviews {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 50%;
+    margin: 5px;
+    margin-top: 20px;
+}
+
+.Bio {
+    background-color: whitesmoke;
+}
+
+.Bio h1, .Bio p {
+    border-bottom: 1px solid black;
+    width: fit-content;
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.review {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+    background-color: darkgray;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.review p {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.reviewText {
+    width: 60%;
+    overflow-wrap: break-word;
+}
+
+.names {
+    background-color: grey;
+}
+
+.profile-pic {
+    width:50px;
+    height:50px;
+    padding: 26px;
+    border-radius: 92px;
+  }
+
+.profile-pic-2 {
+    border-radius: 125px;
+    height: 250px;
+    width: 250px;
+    align-items: center;
+}
+
+.wrapOver{
+    overflow: scroll;
+    max-width: 100%;
+}
+
+.wrapOver2{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .Bio{
+        width: 75%;
+    }
+    .Reviews{
+        width: 80%;
+
+    }
+  }
